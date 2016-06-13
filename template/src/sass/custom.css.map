@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,cAAe;EACb,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,OAAO",
+"sources": ["salmonet.scss"],
+"names": [],
+"file": "salmonet.css"
+}

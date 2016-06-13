@@ -5,15 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Frontpage layout example - UIkit documentation</title>
         <!-- build:css css/style.css -->
-        <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <!-- /build -->
         <!-- build:js js/app.js -->
         <script src="../node_modules/jquery/dist/jquery.js"></script>
         <script src="../node_modules/uikit/dist/js/uikit.js"></script>
+        <script src="../node_modules/uikit/dist/js/components/sticky.js"></script>
         <!-- /build -->
     </head>
 
     <body>
+
+        <div class="sn-top-navbar" data-uk-sticky="">
+            <div class="uk-container uk-container-center">
+                <a class="uk-navbar-brand uk-hidden-small" href="layouts_frontpage.html">Brand</a>
+                <nav class="uk-navbar uk-navbar-attached">
+                <ul class="uk-navbar-nav uk-hidden-small">
+                    <li class="uk-active">
+                        <a href="layouts_frontpage.html">Frontpage</a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+        </div>
 
         <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 

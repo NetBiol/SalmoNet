@@ -27,10 +27,10 @@ module.exports = function(grunt) {
             },  
             dist: {
                 src: [
-                    'node_modules/uikit/src/js/components/*.js',
+                    'node_modules/uikit/src/js/components/sticky.js',
                     'node_modules/uikit/src/js/core/*.js',
                     'node_modules/jquery/dist/jquery.js',
-                    'template/src/js/*.js'
+                    'src/js/*.js'
                 ],  
                 dest: 'dist/js/app.js'
             }  
@@ -43,19 +43,35 @@ module.exports = function(grunt) {
             }
         },
 		watch: {
-			css: {
-				files: '**/*.scss',
+			sass: {
+				files: 'src/sass/*.scss',
 				tasks: ['sass']
+			},
+			css: {
+				files: 'src/css/*.css',
+				tasks: ['cssmin']
+			},
+			js: {
+				files: 'src/js/*.js',
+				tasks: ['uglify']
+			},
+			html: {
+				files: 'src/*.html',
+				tasks: ['processhtml']
 			}
-		}
+		},
+        clean: {
+            dist: ['dist']
+        }
     });
 
     grunt.loadNpmTasks('grunt-processhtml');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     
-    grunt.registerTask('default',['sass', 'cssmin', 'uglify', 'processhtml']);
+    grunt.registerTask('build',['sass', 'cssmin', 'uglify', 'processhtml']);
+    grunt.registerTask('default',['build']);
 };
