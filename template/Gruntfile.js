@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                     'node_modules/uikit/src/js/components/sticky.js',
                     'node_modules/uikit/src/js/core/*.js',
                     'node_modules/jquery/dist/jquery.js',
+                    'node_modules/datatables.net/js/jquery.dataTables.js',
                     'src/js/*.js'
                 ],  
                 dest: 'dist/js/app.js'
@@ -38,7 +39,9 @@ module.exports = function(grunt) {
         processhtml: {
             dist: {
                 files: {
-                    'dist/index.html': ['src/index.html']
+                    'dist/index.html': ['src/index.html'],
+                    'dist/browse.html': ['src/browse.html'],
+                    'dist/download.html': ['src/download.html']
                 }
             }
         },
