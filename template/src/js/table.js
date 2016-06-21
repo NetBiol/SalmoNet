@@ -3,12 +3,18 @@
  */
 
 $(document).ready(function() {
-    $('#example').DataTable( {
-        "ajax": 'data/net.json',
+    $.getJSON(
+        "data/net.json",
+        function(json) {
+            table_data = json;
+        }
+    );
+    $('#browsetable').DataTable( {
+        data: table_data,
         scrollY:        200,
-            deferRender:    true,
-            scrollY:        200,
-            scrollCollapse: true,
-            scroller:       true
+        deferRender:    true,
+        scrollY:        200,
+        scrollCollapse: true,
+        scroller:       true
     } );
 } );
