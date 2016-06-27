@@ -20,7 +20,9 @@
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-init": "^0.3.2",
+    "grunt-processhtml": "^0.4.0",
     "jquery": "^3.0.0",
-    "uikit": "^2.26.3"
+    "uikit": "^2.26.3",
+    "webix": "^3.3.17"
   }
 }

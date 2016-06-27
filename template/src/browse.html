@@ -6,13 +6,13 @@
     <title>Frontpage layout example - UIkit documentation</title>
     <!-- build:css css/style.css -->
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="../node_modules/webix/webix.css"/>
     <!-- /build -->
     <!-- build:js js/app.js -->
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/uikit/dist/js/uikit.js"></script>
     <script src="../node_modules/uikit/dist/js/components/sticky.js"></script>
-    <script src="../node_modules/datatables.net/js/jquery.dataTables.js"></script>
-    <script src="js/table.js"></script>
+    <script src="../node_modules/webix/webix.js"></script>
     <!-- /build -->
 </head>
 
@@ -50,20 +50,8 @@
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
 
-
-
-    <table id="browsetable" class="uk-table" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-    </table>
+            <div id="browsetable" style="height:200px;"></div>
+            <script src="js/table.js"></script>
 
         </div>
     </div>

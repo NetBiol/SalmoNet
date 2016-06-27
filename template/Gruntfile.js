@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/style.css': ['src/css/*.css']
+                    'dist/css/style.css': ['src/css/*.css', 'template/node_modules/webix/webix.css']
                 }
             }
         },
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
                     'node_modules/uikit/src/js/components/sticky.js',
                     'node_modules/uikit/src/js/core/*.js',
                     'node_modules/jquery/dist/jquery.js',
-                    'node_modules/datatables.net/js/jquery.dataTables.js',
+                    'node_modules/webix/webix.js',
                     'src/js/*.js'
                 ],  
                 dest: 'dist/js/app.js'
