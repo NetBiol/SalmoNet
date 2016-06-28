@@ -25,5 +25,18 @@
     "jquery": "^3.0.0",
     "uikit": "^2.26.3",
     "webix": "^3.3.17"
+  },
+  "devDependencies": {
+    "jspm": "^0.16.39"
+  },
+  "jspm": {
+    "dependencies": {
+      "cytoscape": "npm:cytoscape@^2.7.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
