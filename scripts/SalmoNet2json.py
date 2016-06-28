@@ -24,7 +24,7 @@ with open("../data/uniprot-yourlist%3AM2016062714483A1C7ED25EE8374758DF3FD545FD1
     for row in reader:
         UniprotData[row[0]] = {
             "uniprotAC": row[0],
-            "genename": (row[2] if row[2] != "" else row[1]),
+            "genename": row[2],
             "locus": row[2],
             "organism": row[3],
             "taxid": row[4],
@@ -51,9 +51,22 @@ with open("../data/SalmoNet.csv") as f:
 for node in SalmoNet["nodes"]:
     if node in UniprotData:
         SalmoNet["nodes"][node] = UniprotData[node].copy()
+    else:
+        print(node)
     if node in OrthologGroups["uniprot"]:
         SalmoNet["nodes"][node]["og"] = OrthologGroups["uniprot"][node]
+    else:
+        print(node)
 
-with open("test.json", "w") as f:
-    json.dump(SalmoNet, f, indent=4)
-
+with open("../template/src/data/nodes.csv", "w") as f:
+    n = 1
+    for node in SalmoNet["nodes"]:
+        f.write("%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n" % (
+            n,
+            SalmoNet["nodes"][node]["uniprotAC"],
+            SalmoNet["nodes"][node]["genename"],
+            SalmoNet["nodes"][node]["locus"],
+            SalmoNet["nodes"][node]["organism"],
+            SalmoNet["nodes"][node]["taxid"],
+        ))
+        n += 1
