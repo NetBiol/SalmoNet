@@ -27,7 +27,9 @@
     "webix": "^3.3.17"
   },
   "devDependencies": {
-    "jspm": "^0.16.39"
+    "jspm": "^0.16.39",
+    "jspm-dev-server": "^0.4.1",
+    "jspm-server": "^1.0.1"
   },
   "jspm": {
     "dependencies": {
